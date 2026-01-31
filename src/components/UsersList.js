@@ -1,19 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchUsers, addUser } from '../store';
 import Button from './Button';
 import Skeleton from './Skeleton';
+import { useThunk } from '../hooks/useThunk';
+
 
 function UsersList() {
 
-  const [isLoadingUsers, setIsLoadingUsers] = useState(false);
-  const [loadingUsersError, setLoadingUsersError] = useState(null);
+  // const [isLoadingUsers, setIsLoadingUsers] = useState(false);
+  // const [loadingUsersError, setLoadingUsersError] = useState(null);
 
-  const [isCreatingUser, setIsCreatingUser] = useState(false);
-  const [creatingUserError, setCreatingUserError] = useState(null);
+  // const [isCreatingUser, setIsCreatingUser] = useState(false);
+  // const [creatingUserError, setCreatingUserError] = useState(null);
+
+  const [doFetchUsers, isLoadingUsers, loadingUsersError] = useThunk(fetchUsers);
+  const [doAddUser, isCreatingUser, creatingUserError] = useThunk(addUser);
 
 
-  const dispatch = useDispatch();
+  // const dispatch = useDispatch();
   // const { isLoading, data, error } = useSelector((state) => {
   //   return state.users;
   // });
@@ -21,28 +26,31 @@ function UsersList() {
       return state.users;
     });
   useEffect(() => {
-    setIsLoadingUsers(true);
+    // setIsLoadingUsers(true);
 
-    dispatch(fetchUsers())
-      .unwrap()
-      .then(() => {
-        // setIsLoadingUsers(false);
-      })
-      .catch((err) => {
-        setLoadingUsersError(err)
-      })
-      .finally(() => {
-        setIsLoadingUsers(false);
-      })
-  }, [dispatch]);
+    // dispatch(fetchUsers())
+    //   .unwrap()
+    //   .then(() => {
+    //     // setIsLoadingUsers(false);
+    //   })
+    //   .catch((err) => {
+    //     setLoadingUsersError(err)
+    //   })
+    //   .finally(() => {
+    //     setIsLoadingUsers(false);
+    //   })
+
+    doFetchUsers();
+  }, [doFetchUsers]);
 
   const handleUserAdd = () => {
-    setIsCreatingUser(true);
+    // setIsCreatingUser(true);
 
-    dispatch(addUser())
-      .unwrap()
-      .catch((err) => setCreatingUserError(err))
-      .finally(() => setIsCreatingUser(false))
+    // dispatch(addUser())
+    //   .unwrap()
+    //   .catch((err) => setCreatingUserError(err))
+    //   .finally(() => setIsCreatingUser(false))
+    doAddUser();
   };
 
   if (isLoadingUsers) {
