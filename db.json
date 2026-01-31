@@ -3,6 +3,26 @@
     {
       "id": 1,
       "name": "Shivansh Mangla"
+    },
+    {
+      "name": "Floyd Blanda",
+      "id": 2
+    },
+    {
+      "name": "Jonathan Mills",
+      "id": 3
+    },
+    {
+      "name": "Rick Sipes",
+      "id": 4
+    },
+    {
+      "name": "Carol Monahan",
+      "id": 5
+    },
+    {
+      "name": "Lucas Halvorson",
+      "id": 6
     }
   ],
   "albums": [],
