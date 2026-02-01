@@ -21,6 +21,12 @@
       "id": 9
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 89,
+      "title": "First Job",
+      "userId": 1
+    }
+  ],
   "photos": []
 }
