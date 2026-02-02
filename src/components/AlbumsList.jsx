@@ -6,10 +6,10 @@ import AlbumsListItem from "./AlbumsListItem.jsx";
 
 const AlbumsList = ({ user }) => {
 
-    const {data, error, isLoading} = useFetchAlbumsQuery(user);
+    const {data, error, isFetching} = useFetchAlbumsQuery(user);
     const [addAlbum, results] = useAddAlbumMutation();
 
-    console.log(results);
+    // console.log(results);
 
     const handleAddAlbum = () => {
         addAlbum(user);
@@ -18,7 +18,7 @@ const AlbumsList = ({ user }) => {
     // console.log(data, error, isLoading);
 
     let content;
-    if(isLoading){
+    if(isFetching){
         content = <Skeleton times={3} className="h-10 w-full"/>
     }
     else if(error){
