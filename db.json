@@ -26,6 +26,31 @@
       "id": 89,
       "title": "First Job",
       "userId": 1
+    },
+    {
+      "userId": 2,
+      "title": "Electronic Steel Computer",
+      "id": 90
+    },
+    {
+      "userId": 2,
+      "title": "Oriental Wooden Tuna",
+      "id": 91
+    },
+    {
+      "userId": 2,
+      "title": "Fantastic Rubber Soap",
+      "id": 92
+    },
+    {
+      "userId": 2,
+      "title": "Awesome Concrete Salad",
+      "id": 93
+    },
+    {
+      "userId": 2,
+      "title": "Recycled Bronze Chair",
+      "id": 94
     }
   ],
   "photos": []
