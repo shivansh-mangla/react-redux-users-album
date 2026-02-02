@@ -71,6 +71,16 @@
       "userId": 6,
       "title": "Handmade Wooden Fish",
       "id": 98
+    },
+    {
+      "userId": 1,
+      "title": "Intelligent Plastic Table",
+      "id": 99
+    },
+    {
+      "userId": 2,
+      "title": "Rustic Metal Chips",
+      "id": 100
     }
   ],
   "photos": []

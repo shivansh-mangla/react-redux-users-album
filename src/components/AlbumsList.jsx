@@ -2,6 +2,7 @@ import { useFetchAlbumsQuery, useAddAlbumMutation } from "../store";
 import Skeleton from "./Skeleton";
 import ExpandablePanel from "./ExpandablePanel";
 import Button from "./Button.js";
+import AlbumsListItem from "./AlbumsListItem.jsx";
 
 const AlbumsList = ({ user }) => {
 
@@ -25,26 +26,23 @@ const AlbumsList = ({ user }) => {
     }
     else{
         content = data.map((album) => {
-
-            const header = <div>{album.title}</div>
-
-            return <ExpandablePanel key={album.id} header={header}>
-                List of photos in the album
-            </ExpandablePanel>
+            return <AlbumsListItem key={album.id} album={album} />
         });
     }
 
-  return <div>
-        <div>
-            Albums for {user.name}
-            <Button onClick={handleAddAlbum}>
+  return (
+    <div>
+        <div className="m-2 flex flex-row items-center justify-between">
+            <h3 className="text-lg font-bold">Albums for {user.name}</h3>
+            <Button onClick={handleAddAlbum} loading={results.isLoading}>
                 + Add Album
             </Button>
         </div>
         <div>
             {content}
         </div>
-    </div>;
+    </div>
+    );
 }
 
 export default AlbumsList;
