@@ -3,22 +3,6 @@
     {
       "id": 1,
       "name": "Shivansh Mangla"
-    },
-    {
-      "name": "Floyd Blanda",
-      "id": 2
-    },
-    {
-      "name": "Kristina Rath MD",
-      "id": 6
-    },
-    {
-      "name": "Alejandro Leuschke",
-      "id": 7
-    },
-    {
-      "name": "Mr. Todd Von",
-      "id": 9
     }
   ],
   "albums": [
@@ -26,48 +10,13 @@
       "id": 89,
       "title": "First Job",
       "userId": 1
-    },
-    {
-      "userId": 2,
-      "title": "Electronic Steel Computer",
-      "id": 90
-    },
-    {
-      "userId": 2,
-      "title": "Oriental Wooden Tuna",
-      "id": 91
-    },
-    {
-      "userId": 6,
-      "title": "Handmade Wooden Fish",
-      "id": 98
-    },
-    {
-      "userId": 2,
-      "title": "Bespoke Concrete Salad",
-      "id": 99
-    },
-    {
-      "userId": 1,
-      "title": "Gorgeous Granite Keyboard",
-      "id": 100
     }
   ],
   "photos": [
     {
-      "url": "https://loremflickr.com/150/150/abstract?lock=70010",
-      "albumId": 90,
-      "id": 3
-    },
-    {
       "url": "https://loremflickr.com/150/150/abstract?lock=58197",
       "albumId": 89,
       "id": 4
-    },
-    {
-      "url": "https://loremflickr.com/150/150/abstract?lock=42289",
-      "albumId": 90,
-      "id": 5
     }
   ]
 }

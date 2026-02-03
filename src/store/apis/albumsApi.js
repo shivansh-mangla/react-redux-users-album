@@ -22,7 +22,7 @@ export const albumsApi = createApi({
     endpoints: (builder) => {
         return {
             fetchAlbums: builder.query({
-                providesTags: (result, error, user) => {
+                providesTags: (result=[], error, user) => {
                     const tags = result.map((album) => {
                         return { type: 'Album', id: album.id }
                     });
